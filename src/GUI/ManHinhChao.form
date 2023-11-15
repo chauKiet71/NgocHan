@@ -175,7 +175,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
-                <Property name="text" type="java.lang.String" value="m&#xf4; t&#x1ea3; keyword n&#xe0;y"/>
+                <Property name="text" type="java.lang.String" value="T&#x1b0;&#x1a1;ng t&#xe1;c v&#x1edb;i h&#x1ec7; th&#xf4;ng"/>
               </Properties>
             </Component>
           </SubComponents>

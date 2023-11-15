@@ -8,14 +8,14 @@ import java.awt.Desktop;
 import ENTITY.QuanTriVien;
 
 import java.awt.BorderLayout;
+import panelForm.panel1;
+import panelForm.panel2;
 
 /**
  *
  * @author Hân Mai
  */
 public class Main extends javax.swing.JFrame {
-
-
 
     /**
      * Creates new form Main
@@ -24,6 +24,25 @@ public class Main extends javax.swing.JFrame {
         initComponents();
     }
 
+    void openForm1() {
+        panel1 nv = new panel1();
+        nv.setSize(716, 591);
+        nv.setLocation(0, 0);
+        content.removeAll();//xóa tất cả các thành phần hiện tại trong panel
+        content.add(nv, BorderLayout.CENTER);//thêm panel1 vào giữa panel chính
+        content.revalidate();// cập nhật giao diện mới
+        content.repaint();//hiển thị lại giao diện mới
+    }
+    
+        void openForm2() {
+        panel2 nv = new panel2();
+        nv.setSize(716, 591);
+        nv.setLocation(0, 0);
+        content.removeAll();
+        content.add(nv, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,7 +62,7 @@ public class Main extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        content = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -139,16 +158,16 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        content.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 578, Short.MAX_VALUE)
+        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
+        content.setLayout(contentLayout);
+        contentLayout.setHorizontalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 716, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contentLayout.setVerticalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -159,14 +178,15 @@ public class Main extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(kGradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -203,15 +223,15 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        // TODO add your handling code here:
+        openForm2();
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-      
+        openForm1();
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
-     
+
     }//GEN-LAST:event_jLabel2MouseEntered
 
     /**
@@ -250,6 +270,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel content;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -263,7 +284,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private keeptoo.KGradientPanel kGradientPanel1;
     // End of variables declaration//GEN-END:variables
 }

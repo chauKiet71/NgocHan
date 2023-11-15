@@ -69,7 +69,7 @@ public class ManHinhChao extends javax.swing.JDialog {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("LINH HOẠT");
 
-        jLabel7.setText("mô tả keyword này");
+        jLabel7.setText("Tương tác với hệ thông");
 
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
         kGradientPanel2.setLayout(kGradientPanel2Layout);
